@@ -8,22 +8,19 @@ import service.ApplianceService;
 import service.validate.Validator;
 
 import java.io.IOException;
+import java.util.List;
 
 public class ApplianceServiceImpl implements ApplianceService {
 
     @Override
-    public Appliance find(Criteria criteria) throws IllegalAccessException, IOException{
+    public List<Appliance> find(Criteria criteria) throws IllegalAccessException, IOException{
         if (!Validator.criteriaValidator(criteria)) {
             return null;
         }
 
         DAOFactory factory = DAOFactory.getInstance();
         ApplianceDAO applianceDAO = factory.getApplianceDAO();
-
-        Appliance appliance = applianceDAO.find(criteria);
-
-        // you may add your own code here
-
+            List<Appliance> appliance = applianceDAO.find(criteria);
         return appliance;
     }
 

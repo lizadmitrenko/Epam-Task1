@@ -3,7 +3,7 @@ import entity.*;
 
 import java.lang.reflect.Field;
 
-public class ApplianceParser {
+public class ApplianceParser { // для чтения данных с файла
     private final String oven = "Oven";
     private final String laptop = "Laptop";
     private final String refrigerator = "Refrigerator";

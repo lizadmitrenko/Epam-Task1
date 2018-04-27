@@ -5,12 +5,16 @@ import entity.Appliance;
 import entity.criteria.Criteria;
 import service.ApplianceService;
 import service.ServiceFactory;
+
+import java.io.IOException;
+import java.util.List;
+
 import static entity.criteria.SearchCriteria.*;
 
 public class Main {
 
-    public static void main(String[] args) {
-        Appliance appliance;
+    public static void main(String[] args)throws IllegalAccessException, NoSuchFieldException,IOException {
+        List<Appliance> appliance;
 
         ServiceFactory factory = ServiceFactory.getInstance();
         ApplianceService service = factory.getApplianceService();

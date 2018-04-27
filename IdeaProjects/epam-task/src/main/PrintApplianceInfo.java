@@ -7,7 +7,7 @@ import java.util.List;
 
 public class PrintApplianceInfo {
 
-    public void printProducts(List<Appliance> list) throws NoSuchFieldException,IllegalAccessException{
+    public static void print(List<Appliance> list) throws NoSuchFieldException,IllegalAccessException{
         if(list.isEmpty()){
             System.out.println("There are no such products!");
         }
@@ -18,7 +18,7 @@ public class PrintApplianceInfo {
         }
     }
 
-    private static void printProduct(Appliance product) throws NoSuchFieldException,IllegalAccessException{
+    public static void printProduct(Appliance product) throws NoSuchFieldException,IllegalAccessException{
         Field[] fields = product.getClass().getDeclaredFields();
         System.out.print(product.getClass().getSimpleName()+": ");
         for(Field f: fields) {

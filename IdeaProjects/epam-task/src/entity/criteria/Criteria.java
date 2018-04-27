@@ -11,11 +11,17 @@ public class Criteria {
         this.productName = productName;
     }
 
+    public Criteria(){}
+
     public String getProductName() {
         return productName;
     }
 
     public void set(String searchCriteria, Object value) {
         criteria.put(searchCriteria, value);
+    }
+
+    public Map<String, Object> getCriteria() {
+        return criteria;
     }
 }
